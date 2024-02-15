@@ -68,7 +68,6 @@ h2,
 h3 {
     line-height: 1;
     margin: 0;
-    
 }
 
 h1 { font-size: var(--fs-h1) }
@@ -99,10 +98,6 @@ h3 { font-size: var(--fs-h3) }
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
-}
-
-.section__subtitle--about {
-    padding-top: 15px;
 }
 
 
@@ -284,7 +279,7 @@ header {
 @media (min-width: 600px) {
     .about-me {
         display: grid;
-        grid-template-columns: 1fr 157px;
+        grid-template-columns: 1fr 200px;
         grid-template-areas: 
         "title img"
         "subtitle img"
@@ -337,8 +332,9 @@ header {
 }
 
 .portfolio__img {
+    
     transition: 
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        transform 550ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
 }
 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daniel's Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="#home" class="logo__link">
+                <img src="Images/CSLogo.png" alt="daniel's logo">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>    
+        </header>
+        
+        <!-- Intro -->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Daniel Bekele</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
+            <img src="Images/YEOC_Headshot.jpg" alt="A picture of Daniel Bekele smiling" class="intro__img">
+        </section>
+            
+       
+        <!-- About me -->
+        <section class="about-me" id="about">
+           <h2 class="section__title section__title--about">Who I am</h2>
+           <p class="section__subtitle section__subtitle--about">Aspiring Software Engineer based out of Everett, WA</p>
+           
+           <div class="about-me__body">
+                <p> I am a freshman at the University of Washington pursuing a major in Computer Science. I was born and raised in Everett, Washington
+                    although my family is from Addis Ababa, Ethiopia. I enjoy spending time
+                    with my friends and family, going to church, playing sports, and watching
+                    movies. </p>
+                <p> I aspire to become a Software Engineer in the future and make the world a
+                    safer and more accessible place for all people through the use of Computer
+                    Science and Technology.
+                </p>
+                <p>
+                    For more details on my qualifications, check out my resume <a href="Daniel Bekele Resume 2024.docx">here</a>
+                </p>
+            </div>
+
+            <img src="Images/New PFP.JPG" alt="Daniel smiling with a thumbs up" class="about-me__img"> 
+        </section>
+
+        <!-- My Work -->  
+        <section class="my-work" id="work">
+            <h2 class="section__title section_-title--work">My work</h2>
+            <p class="section__subtitle section__subtitle--work">A few projects I've worked on in the past include...</p>
+            
+            <div class="portfolio">
+                <!--Portfolio Item 01-->
+                <a href="https://docs.google.com/presentation/d/1_ruZ0FNzklpL5zKYujZ5lmU0LSEHk-sk6SH_r7NCIlQ/present?usp=sharing" 
+                class="portfolio__item">
+                    <img src="Images/survplot.png" alt="Survival Plot" class="portfolio__img">
+                </a>
+
+                <!--Portfolio Item 02-->
+                <a href="https://www.canva.com/design/DAFHup9R7qM/M4T0ar3aSAIU0Rp8tL6UTg/view?utm_content=DAFHup9R7qM&utm_campaign=designshare&utm_medium=link&utm_source=editor" 
+                class="portfolio__item">
+                    <img src="Images/StudentsForSuccess.png" alt="Students 4 Success Presentation" class="portfolio__img">
+                </a>
+
+                <!--Portfolio Item 03 
+                <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:644febc1-a626-448f-a289-e83635af7460" class="portfolio__item">
+                    <img src="Resume Image.png" alt="THIRD PROJECT" class="portfolio__img">
+                </a>
+                -->
+            </div>
+            
+        </section>     
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:danielbekele251@gmail.com" class="footer-link">danielbekele251@gmail.com</a>
+            <ul class="social-list">
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="www.linkedin.com/in/daniel-bekele-t3t8">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/Danielb232">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        <script src="index.js"></script>
+
+    </body>
+</html>

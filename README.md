@@ -1,1 +1,1 @@
-# Danie's Portfolio Website Updated Feb 2024
+# Daniel's Portfolio Website Updated Sept 2024

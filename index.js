@@ -10,3 +10,24 @@ navLinks.forEach(link => {
         document.body.classList.remove('nav-open');
     })
 })
+
+document.querySelector('a[href="Bekele_Daniel.pdf"]').addEventListener('click', async () => {
+  let location = 'unknown';
+
+  try {
+    const geo = await fetch('https://ipapi.co/json/');
+    const data = await geo.json();
+    location = `${data.city}, ${data.region}, ${data.country_name}`;
+  } catch (e) {}
+
+  fetch('https://formspree.io/f/maqkgqgz', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      message: 'Someone clicked your resume link',
+      time: new Date().toLocaleString(),
+      referrer: document.referrer || 'direct visit',
+      location: location
+    })
+  });
+});

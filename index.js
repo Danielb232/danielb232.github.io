@@ -27,7 +27,9 @@ document.querySelector('a[href="Bekele_Daniel.pdf"]').addEventListener('click', 
       message: 'Someone clicked your resume link',
       time: new Date().toLocaleString(),
       referrer: document.referrer || 'direct visit',
-      location: location
+      location: location,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      language: navigator.language,
     })
   });
 });

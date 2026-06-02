@@ -11,7 +11,9 @@ navLinks.forEach(link => {
     })
 })
 
-document.querySelector('a[href="Bekele_Daniel.pdf"]').addEventListener('click', async () => {
+document.querySelector('a[href="Bekele_Daniel.pdf"]').addEventListener('click', async (e) => {
+  e.preventDefault();
+
   let location = 'unknown';
 
   try {
@@ -20,16 +22,20 @@ document.querySelector('a[href="Bekele_Daniel.pdf"]').addEventListener('click', 
     location = `${data.city}, ${data.region}, ${data.country_name}`;
   } catch (e) {}
 
-  fetch('https://formspree.io/f/maqkgqgz', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      message: 'Someone clicked your resume link',
-      time: new Date().toLocaleString(),
-      referrer: document.referrer || 'direct visit',
-      location: location,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      language: navigator.language,
-    })
-  });
+  try {
+    await fetch('https://formspree.io/f/maqkgqgz', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: 'Someone clicked your resume link',
+        time: new Date().toLocaleString(),
+        referrer: document.referrer || 'direct visit',
+        location: location,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        language: navigator.language,
+      })
+    });
+  } catch (e) {}
+
+  window.open('Bekele_Daniel.pdf', '_blank');
 });
